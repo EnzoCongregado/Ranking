@@ -1,0 +1,215 @@
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url('Images/batalla.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    max-width: 100%;
+    color: #6f00ff;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    background-image: url('Images/Pelea.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 110px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+    background-color: aqua;
+    
+}
+
+.Segmento {
+    font-size: 30px;
+    display: flex;
+    background-color: #610707;
+    margin: 3vh;
+    color: #fff;
+    text-align: center;
+}
+
+.ContenedorTabla {
+    display: flex;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+
+}
+
+.Contenedor{
+    width: 800px;
+    max-width: 100%;
+}
+
+th, td {
+    font-size: 12px;
+    max-width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.Carta {
+    
+    width: 90%; 
+    max-width: 900px; 
+    height: 300px;
+    padding-bottom: 100px; 
+    perspective: 1000px;
+    margin: 20px ;
+    overflow: hidden; 
+}
+
+.Carta .Frente,
+.Carta .Espalda {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.Carta .Frente {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+
+.Carta .Espalda {
+    transform: rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+.Carta .Espalda p{
+    align-items: left;
+    width: 80%;
+
+}
+
+.Carta:hover .Frente {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.Carta:hover .Espalda {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+}
+
+.Carta img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.Carta h2 {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.botón {
+    background-color: #610707;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.botón:hover {
+    background-color: black;
+    color: #1a8efa;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 24px;
+        padding: 10px;
+    }
+    
+    .Segmento {
+        font-size: 20px;
+    }
+    
+    .Carta {
+        max-width: 90%; 
+        height: 60vh;
+    }
+
+    table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    .botón {
+        margin: 5px;
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
